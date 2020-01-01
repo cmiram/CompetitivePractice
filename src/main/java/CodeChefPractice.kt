@@ -1,5 +1,3 @@
-package main.java
-
 import java.util.*
 
 fun main() {
@@ -18,7 +16,7 @@ object HardSequence {
     private val counts = arrayOf("")
 
     fun solve(t: Int): String {
-        return counts[t-1]
+        return counts[t - 1]
     }
 
 }

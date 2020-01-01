@@ -1,5 +1,3 @@
-package main.java
-
 import java.util.*
 import kotlin.math.abs
 import kotlin.math.min
@@ -81,11 +79,4 @@ fun dayOfProgrammer(year: Int): String {
  */
 fun pageCount(n: Int, p: Int): Int {
     return if(n-p == 1 && n%2 == 0 && n != 2) 1 else min(p/2, (n-p)/2)
-}
-
-/*
- * Complete the pageCount function below.
- */
-fun pageCount1(n: Int, p: Int): Int {
-    return if(n == p || p == 1) 0 else n%2 - n/2
 }

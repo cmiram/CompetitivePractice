@@ -80,3 +80,12 @@ fun dayOfProgrammer(year: Int): String {
 fun pageCount(n: Int, p: Int): Int {
     return if(n-p == 1 && n%2 == 0 && n != 2) 1 else min(p/2, (n-p)/2)
 }
+
+fun circularArrayRotation(a: Array<Int>, k: Int, queries: Array<Int>): Array<Int> {
+    val offset = a.size - (k % a.size)
+    val res = queries.map {
+        val ind = it + offset
+        if(ind < a.size) a[ind] else a[ind-a.size]
+    }.toTypedArray()
+    return res
+}
